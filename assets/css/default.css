@@ -1,3 +1,67 @@
+:root {
+  color-scheme: light dark; /* both supported */
+    --text-color: #222;
+    --background-color: #fff;
+    --link-color: #809fff;
+    --code-background-color: #C4C4C4;
+    --font-weight: 400;
+    --hidden-color: #7a7a7a;
+    --table-border: black;
+}
+
+body {
+    --text-color: #222;
+    --background-color: #fff;
+    --link-color: #809fff;
+    --code-background-color: #C4C4C4;
+    --font-weight: 400;
+    --hidden-color: #7a7a7a;
+    --table-border: black;
+}
+
+body.light-mode {
+    --text-color: #222;
+    --background-color: #fff;
+    --link-color: #809fff;
+    --code-background-color: #C4C4C4;
+    --font-weight: 400;
+    --hidden-color: #7a7a7a;
+    --table-border: black;
+}
+
+body.dark-theme {
+    --text-color: #eee;
+    --background-color: #121212;
+    --link-color: #809fff;
+    --code-background-color: #7a7a7a;
+    --font-weight: 300;
+    --hidden-color: #C4C4C4;
+    --table-border: #7a7a7a;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body { 
+    --text-color: #eee;
+    --background-color: #121212;
+    --link-color: #809fff;
+    --code-background-color: #7a7a7a;
+    --font-weight: 300;
+    --hidden-color: #C4C4C4;
+    --table-border: #7a7a7a;
+  }
+  /* Override dark mode with light mode styles if the user decides to swap */
+  body.light-theme {
+    --text-color: #222;
+    --background-color: #fff;
+    --link-color: #809fff;
+    --code-background-color: #C4C4C4;
+    --font-weight: 400;
+    --hidden-color: #7a7a7a;
+    --table-border: black;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
 * {
