@@ -13,11 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <script type="text/javascript" src="assets/js/darkLightMode.js"></script>
-  <script type="text/javascript" src="assets/js/scroll.js"></script>
+  <script type="text/javascript" src="assets/js/scrollnav.min.umd.js"></script>
+  <script> 
+    const content = document.querySelector('.main-content');
+    scrollnav.init(content, {
+      sections: 'section'
+    });
+  </script>
 
 </head>
-  <body class="<?php echo $themeClass; ?>">
-    <div class="side-bar">
+  <body class="">
+    <!--<div class="side-bar">
       <nav class="navigation">
         <ul>
           <li>
@@ -30,7 +36,7 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </div>-->
     <div class="main-content">
       <section id="about">
         <h1>About</h1>
