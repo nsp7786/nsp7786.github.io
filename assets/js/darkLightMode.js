@@ -1,13 +1,23 @@
 
-let themeClass = getcookie("theme")
+let themeClass = getCookie("theme");
 if (themeClass != "") {
   if (themeClass == 'dark') {
-    document.body.classList.toggle("light-mode");
-    var theme = document.body.classList.contains("light-mode") ? "light" : "dark";
-  } else if (themeClass == 'light') {
     document.body.classList.toggle("dark-mode");
-    var theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+  } else if (themeClass == 'light') {
+    document.body.classList.toggle("light-mode");
   }  
+}
+
+function getCookie(cname) {
+     var name = cname + "=";
+     var ca = document.cookie.split(';');
+     for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if(c.indexOf(name) == 0)
+           return c.substring(name.length,c.length);
+     }
+     return "";
 }
 
 
